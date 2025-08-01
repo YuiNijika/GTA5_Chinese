@@ -1,3 +1,1 @@
-# VueFramework
-
-像Nuxt一样支持自动引入组件以及自动路由配置
+GTA5中配官方网站
