@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const characters = ref([])
-const baseUrl = 'https://gta5-chinese-r2.x-x.work/web/audio'
 const currentAudio = ref(null)
 const isLoading = ref(false)
 const currentPlayingId = ref(null)
@@ -44,7 +43,7 @@ const toggleAudio = (character) => {
     currentPlayingId.value = character.id
 
     // 创建新的音频对象并播放
-    currentAudio.value = new Audio(`${baseUrl}/${character.cv.audio}`)
+    currentAudio.value = new Audio(`audio/${character.cv.audio}`)
 
     // 监听加载完成事件
     currentAudio.value.addEventListener('canplaythrough', () => {
@@ -86,7 +85,7 @@ const stopAudio = () => {
 </script>
 
 <template>
-    <input type="radio" name="my_tabs_2" class="tab" aria-label="全部角色" />
+    <input type="radio" name="my_tabs_2" class="tab" aria-label="主要角色CV" checked="checked" />
     <div class="tab-content mt-4">
         <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
             <div v-for="character in characters" :key="character.id" class="card bg-base-100 shadow-xl">
@@ -104,7 +103,7 @@ const stopAudio = () => {
                         >
                             <span v-if="isLoading && currentPlayingId === character.id" class="loading loading-spinner"></span>
                             <span v-else-if="currentPlayingId === character.id">停止播放</span>
-                            <span v-else>播放</span>
+                            <span v-else>试听</span>
                         </button>
                     </div>
                 </div>

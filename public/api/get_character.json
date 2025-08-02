@@ -96,11 +96,11 @@
             },
             {
                 "id": "7",
-                "name": "凯尔·查维斯",
+                "name": "网球教练",
                 "image": "KyleChavis.webp",
                 "cv": {
                     "name": "祈衍",
-                    "audio": "凯尔-祈衍.wav"
+                    "audio": "网球教练-祈衍.wav"
                 }
             },
             {
@@ -123,7 +123,7 @@
             },
             {
                 "id": "10",
-                "name": "伊塞亚·费蓝德",
+                "name": "费兰德医生",
                 "image": "IsiahFriedlander.webp",
                 "cv": {
                     "name": "九日草方",
@@ -135,8 +135,8 @@
                 "name": "马丁·玛德拉索",
                 "image": "MartinMadrazo.webp",
                 "cv": {
-                    "name": "祈衍",
-                    "audio": "马丁-九日草方.wav"
+                    "name": "九日草方",
+                    "audio": "玛德拉索-九日草方.wav"
                 }
             }
         ]
