@@ -7,7 +7,8 @@
                 "name": "麦克·迪圣塔",
                 "image": "MichaelDeSanta.webp",
                 "cv": {
-                    "name": "牢蝈"
+                    "name": "祈衍",
+                    "audio": "麦克-祈衍.wav"
                 }
             },
             {
@@ -15,7 +16,8 @@
                 "name": "崔佛·菲利普",
                 "image": "TrevorPhilips.webp",
                 "cv": {
-                    "name": "牢蝈"
+                    "name": "阿笑",
+                    "audio": "崔佛-阿笑.wav"
                 }
             },
             {
@@ -23,7 +25,8 @@
                 "name": "富兰克林·克林顿",
                 "image": "FranklinClinton.webp",
                 "cv": {
-                    "name": "牢蝈"
+                    "name": "Cyber蝈蝈总",
+                    "audio": "富兰克林-Cyber蝈蝈总.wav"
                 }
             },
             {
@@ -31,10 +34,111 @@
                 "name": "莱斯特·克瑞斯特",
                 "image": "LesterCrest.webp",
                 "cv": {
-                    "name": "牢蝈"
+                    "name": "工新河",
+                    "audio": "莱斯特-工新河.wav"
                 }
             }
         ],
-        "all": null
+        "all": [
+            {
+                "id": "1",
+                "name": "麦克·迪圣塔",
+                "image": "MichaelDeSanta.webp",
+                "cv": {
+                    "name": "祈衍",
+                    "audio": "麦克-祈衍.wav"
+                }
+            },
+            {
+                "id": "2",
+                "name": "崔佛·菲利普",
+                "image": "TrevorPhilips.webp",
+                "cv": {
+                    "name": "阿笑",
+                    "audio": "崔佛-阿笑.wav"
+                }
+            },
+            {
+                "id": "3",
+                "name": "富兰克林·克林顿",
+                "image": "FranklinClinton.webp",
+                "cv": {
+                    "name": "Cyber蝈蝈总",
+                    "audio": "富兰克林-Cyber蝈蝈总.wav"
+                }
+            },
+            {
+                "id": "4",
+                "name": "莱斯特·克瑞斯特",
+                "image": "LesterCrest.webp",
+                "cv": {
+                    "name": "工新河",
+                    "audio": "莱斯特-工新河.wav"
+                }
+            },
+            {
+                "id": "5",
+                "name": "拉玛·戴维斯",
+                "image": "LamarDavis.webp",
+                "cv": {
+                    "name": "阿笑",
+                    "audio": "拉玛-阿笑.wav"
+                }
+            },
+            {
+                "id": "6",
+                "name": "吉米·迪圣塔",
+                "image": "JimmyDeSanta.webp",
+                "cv": {
+                    "name": "小湿帝JokiJoki",
+                    "audio": "吉米-小湿帝JokiJoki.wav"
+                }
+            },
+            {
+                "id": "7",
+                "name": "凯尔·查维斯",
+                "image": "KyleChavis.webp",
+                "cv": {
+                    "name": "祈衍",
+                    "audio": "凯尔-祈衍.wav"
+                }
+            },
+            {
+                "id": "8",
+                "name": "布莱德·斯奈德",
+                "image": "BradSnider.webp",
+                "cv": {
+                    "name": "九日草方",
+                    "audio": "布莱德-九日草方.wav"
+                }
+            },
+            {
+                "id": "9",
+                "name": "丹尼斯·克林顿",
+                "image": "DeniseClinton.webp",
+                "cv": {
+                    "name": "小湿帝JokiJoki",
+                    "audio": "丹尼斯-小湿帝JokiJoki.wav"
+                }
+            },
+            {
+                "id": "10",
+                "name": "伊塞亚·费蓝德",
+                "image": "IsiahFriedlander.webp",
+                "cv": {
+                    "name": "九日草方",
+                    "audio": "费兰德心理医生-九日草方.wav"
+                }
+            },
+            {
+                "id": "11",
+                "name": "马丁·玛德拉索",
+                "image": "MartinMadrazo.webp",
+                "cv": {
+                    "name": "祈衍",
+                    "audio": "马丁-九日草方.wav"
+                }
+            }
+        ]
     }
 }
