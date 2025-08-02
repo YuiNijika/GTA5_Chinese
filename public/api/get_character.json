@@ -8,7 +8,7 @@
                 "image": "MichaelDeSanta.webp",
                 "cv": {
                     "name": "祈衍",
-                    "audio": "麦克-祈衍.wav"
+                    "audio": "麦克-祈衍.m4a"
                 }
             },
             {
@@ -17,7 +17,7 @@
                 "image": "TrevorPhilips.webp",
                 "cv": {
                     "name": "阿笑",
-                    "audio": "崔佛-阿笑.wav"
+                    "audio": "崔佛-阿笑.m4a"
                 }
             },
             {
@@ -26,7 +26,7 @@
                 "image": "FranklinClinton.webp",
                 "cv": {
                     "name": "Cyber蝈蝈总",
-                    "audio": "富兰克林-Cyber蝈蝈总.wav"
+                    "audio": "富兰克林-Cyber蝈蝈总.m4a"
                 }
             },
             {
@@ -35,7 +35,7 @@
                 "image": "LesterCrest.webp",
                 "cv": {
                     "name": "工新河",
-                    "audio": "莱斯特-工新河.wav"
+                    "audio": "莱斯特-工新河.m4a"
                 }
             }
         ],
@@ -46,7 +46,7 @@
                 "image": "MichaelDeSanta.webp",
                 "cv": {
                     "name": "祈衍",
-                    "audio": "麦克-祈衍.wav"
+                    "audio": "麦克-祈衍.m4a"
                 }
             },
             {
@@ -55,7 +55,7 @@
                 "image": "TrevorPhilips.webp",
                 "cv": {
                     "name": "阿笑",
-                    "audio": "崔佛-阿笑.wav"
+                    "audio": "崔佛-阿笑.m4a"
                 }
             },
             {
@@ -64,7 +64,7 @@
                 "image": "FranklinClinton.webp",
                 "cv": {
                     "name": "Cyber蝈蝈总",
-                    "audio": "富兰克林-Cyber蝈蝈总.wav"
+                    "audio": "富兰克林-Cyber蝈蝈总.m4a"
                 }
             },
             {
@@ -73,7 +73,7 @@
                 "image": "LesterCrest.webp",
                 "cv": {
                     "name": "工新河",
-                    "audio": "莱斯特-工新河.wav"
+                    "audio": "莱斯特-工新河.m4a"
                 }
             },
             {
@@ -82,7 +82,7 @@
                 "image": "LamarDavis.webp",
                 "cv": {
                     "name": "阿笑",
-                    "audio": "拉玛-阿笑.wav"
+                    "audio": "拉玛-阿笑.m4a"
                 }
             },
             {
@@ -91,7 +91,7 @@
                 "image": "JimmyDeSanta.webp",
                 "cv": {
                     "name": "小湿帝JokiJoki",
-                    "audio": "吉米-小湿帝JokiJoki.wav"
+                    "audio": "吉米-小湿帝JokiJoki.m4a"
                 }
             },
             {
@@ -100,7 +100,7 @@
                 "image": "KyleChavis.webp",
                 "cv": {
                     "name": "祈衍",
-                    "audio": "网球教练-祈衍.wav"
+                    "audio": "网球教练-祈衍.m4a"
                 }
             },
             {
@@ -109,7 +109,7 @@
                 "image": "BradSnider.webp",
                 "cv": {
                     "name": "九日草方",
-                    "audio": "布莱德-九日草方.wav"
+                    "audio": "布莱德-九日草方.m4a"
                 }
             },
             {
@@ -118,7 +118,7 @@
                 "image": "DeniseClinton.webp",
                 "cv": {
                     "name": "小湿帝JokiJoki",
-                    "audio": "丹尼斯-小湿帝JokiJoki.wav"
+                    "audio": "丹尼斯-小湿帝JokiJoki.m4a"
                 }
             },
             {
@@ -127,7 +127,7 @@
                 "image": "IsiahFriedlander.webp",
                 "cv": {
                     "name": "九日草方",
-                    "audio": "费兰德心理医生-九日草方.wav"
+                    "audio": "费兰德心理医生-九日草方.m4a"
                 }
             },
             {
@@ -136,7 +136,7 @@
                 "image": "MartinMadrazo.webp",
                 "cv": {
                     "name": "九日草方",
-                    "audio": "玛德拉索-九日草方.wav"
+                    "audio": "玛德拉索-九日草方.m4a"
                 }
             }
         ]

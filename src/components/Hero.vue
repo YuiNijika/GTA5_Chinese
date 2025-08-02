@@ -2,12 +2,12 @@
 import {ref, onMounted} from 'vue'
 
 const currentAudio = ref(null)
-const isPlaying = ref(true)
+const isPlaying = ref(false)
 const downloadData = ref([])
 
 const playAudio = () => {
   if (!currentAudio.value) {
-    currentAudio.value = new Audio(`audio/bgm.wav`)
+    currentAudio.value = new Audio(`audio/bgm.m4a`)
     currentAudio.value.addEventListener('ended', onAudioEnded)
   }
   currentAudio.value.play()
@@ -30,7 +30,9 @@ const toggleAudio = () => {
 
 onMounted(async () => {
   if (!currentAudio.value){
-    playAudio()
+    // 模拟点击播放按钮
+    const btn = document.getElementById('bgm-btn')
+    btn.click()
   }
   try {
         const response = await fetch('/api/get_download.json')
@@ -55,7 +57,7 @@ onMounted(async () => {
     </div>
     <!-- BGM播放图标控件 -->
     <div class="fixed bottom-4 right-4 z-50">
-      <button @click="toggleAudio" class="btn btn-circle btn-primary">
+      <button @click="toggleAudio" class="btn btn-circle btn-primary" id="bgm-btn">
         <svg v-if="isPlaying" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 6a7.975 7.975 0 015.657 2.343m0 0a7.975 7.975 0 010 11.314m-11.314 0a7.975 7.975 0 010-11.314m0 0a7.975 7.975 0 015.657-2.343" />
         </svg>
