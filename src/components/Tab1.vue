@@ -104,7 +104,7 @@ const stopAudio = () => {
                         >
                             <span v-if="isLoading && currentPlayingId === character.id" class="loading loading-spinner"></span>
                             <span v-else-if="currentPlayingId === character.id">停止播放</span>
-                            <span v-else>播放</span>
+                            <span v-else>试听</span>
                         </button>
                     </div>
                 </div>
