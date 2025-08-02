@@ -8,7 +8,7 @@ const navItems = ref([
     },
     {
         title: '爱发电',
-        url: 'https://space.bilibili.com/37706580'
+        url: 'https://ifdian.net/a/Katock'
     }
 ])
 </script>
