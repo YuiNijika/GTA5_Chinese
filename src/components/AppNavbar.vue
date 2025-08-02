@@ -1,16 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
-const navItems = ref([
-    {
-        title: '哔哩哔哩',
-        url: 'https://space.bilibili.com/37706580'
-    },
-    {
-        title: '爱发电',
-        url: 'https://ifdian.net/a/Katock'
+const navItems = ref([])
+
+onMounted(async () => {
+    try {
+        const response = await fetch('/api/get_navbar.json')
+        const data = await response.json()
+        navItems.value = data.data
+    } catch (error) {
+        console.error('获取导航数据失败:', error)
     }
-])
+})
 </script>
 
 <template>
@@ -25,16 +26,16 @@ const navItems = ref([
                     </svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li v-for="(item, index) in navItems" :key="index">
+                    <li v-for="item in navItems" :key="item.id">
                         <a :href="item.url" target="_blank">{{ item.title }}</a>
                     </li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">GTA5中配</a>
+            <RouterLink to="/" class="btn btn-ghost text-xl">GTA5中配</RouterLink>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li v-for="(item, index) in navItems" :key="index">
+                <li v-for="item in navItems" :key="item.id">
                     <a :href="item.url" target="_blank">{{ item.title }}</a>
                 </li>
             </ul>

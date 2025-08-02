@@ -1,15 +1,19 @@
 {
     "success": true,
-    "data": [
-        {
-            "id": "1",
-            "title": "直链下载",
-            "url": "https://gta5-chinese-r2.x-x.work/gta5_chinese_dubbed.7z"
-        },
-        {
-            "id": "2",
-            "title": "123云盘",
-            "url": "https://www.123865.com/s/AErojv-fGamh"
-        }
-    ]
+    "data": {
+        "download": [
+            {
+                "id": "1",
+                "title": "直链下载",
+                "url": "https://gta5-chinese-r2.x-x.work/gta5_chinese_dubbed.7z"
+            },
+            {
+                "id": "2",
+                "title": "123云盘",
+                "url": "https://www.123865.com/s/AErojv-fGamh"
+            }
+        ],
+        "text": "推荐使用直链下载, 如果下载失败请加群 <a href=\"https://qm.qq.com/q/xbeh7ubNsc\" target=\"_blank\">939762012</a> 讨论和交流",
+        "title": "立即下载"
+    }
 }

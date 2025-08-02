@@ -1,13 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const downloadUrl = ref([])
+const downloadData = ref({})
 
 onMounted(async () => {
     try {
         const response = await fetch('/api/get_download.json')
         const data = await response.json()
-        downloadUrl.value = data.data
+        downloadData.value = data.data
     } catch (error) {
         console.error('没有请求到数据:', error)
     }
@@ -32,10 +32,10 @@ onMounted(async () => {
             <form method="dialog">
                 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
             </form>
-            <p class="py-4">推荐使用直链下载, 如果下载失败请加群 <a href="https://qm.qq.com/q/xbeh7ubNsc" target="_blank">939762012</a> 讨论和交流</p>
+            <p class="py-4" v-html="downloadData.text"></p>
             <div class="modal-action">
                 <form method="dialog">
-                    <a v-for="item in downloadUrl" :key="item.id" :href="item.url" class="btn btn-soft btn-secondary mr-2"
+                    <a v-for="item in downloadData.download" :key="item.id" :href="item.url" class="btn btn-soft btn-secondary mr-2"
                         target="_blank">
                         {{ item.title }}
                     </a>
