@@ -96,8 +96,8 @@ const stopAudio = () => {
                     <h3 class="card-title">{{ character.name }}</h3>
                     <p>CV: {{ character.cv.name }}</p>
                     <div class="card-actions justify-end mt-2">
-                        <button 
-                            @click="toggleAudio(character)" 
+                        <button
+                            @click="toggleAudio(character)"
                             class="btn btn-primary"
                             :class="{ 'btn-secondary': currentPlayingId === character.id && !isLoading }"
                         >

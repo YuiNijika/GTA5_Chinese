@@ -4,6 +4,8 @@ import {ref, onMounted} from 'vue'
 const currentAudio = ref(null)
 const isPlaying = ref(false)
 const downloadData = ref([])
+const origin_download_data = ref([])
+const enhanced_download_data = ref([])
 
 const playAudio = () => {
   if (!currentAudio.value) {
@@ -38,6 +40,9 @@ onMounted(async () => {
     const response = await fetch('/api/get_download.json')
     const data = await response.json()
     downloadData.value = data.data
+    console.log('下载数据:', downloadData)
+    origin_download_data.value = data.data.origin
+    enhanced_download_data.value = data.data.enhanced
   } catch (error) {
     console.error('没有请求到数据:', error)
   }
@@ -50,17 +55,26 @@ onMounted(async () => {
     <div class="hero-overlay bg-opacity-60"></div>
     <div class="hero-content text-center text-neutral-content">
       <div class="max-w-10xl flex justify-center items-center gap-10">
-        <div class="flex flex-col items-center justify-center">
-          <h1 class="mb-10 text-5xl font-bold">GTAV 国语配音</h1>
-          <p class="mb-5">老一辈GTA艺术家倾情打造，好麦坞专业文案/配音团队匠心巨制，感受国语配音带来的沉浸式游戏体验吧！</p>
-          <button class="btn btn-primary btn-lg" onclick="my_modal_5.showModal()">立即下载</button>
+        <div class="max-w-10xl flex flex-col lg:flex-row justify-center items-center gap-10">
+          <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-4">
+            <h1 class="mb-10 text-3xl md:text-5xl font-bold">GTAV 国语配音</h1>
+            <p class="mb-5 text-center">
+              老一辈GTA艺术家倾情打造，好麦坞专业文案/配音团队匠心巨制，感受国语配音带来的沉浸式游戏体验吧！
+            </p>
+            <div class="flex gap-4">
+              <button class="btn btn-primary" onclick="origin_v_dialog.showModal()">传承版安装</button>
+              <button class="btn btn-primary" onclick="enhanced_v_dialog.showModal()">增强版安装</button>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex justify-center p-4">
+            <iframe
+                src="//bilibili.com/blackboard/html5mobileplayer.html?bvid=BV1Kd5GzeEHb&autoplay=0&hideCoverInfo=0&danmaku=0"
+                class="w-full max-w-full aspect-video"
+                allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div class="flex flex-col items-center justify-center">
-          <iframe
-              src="//bilibili.com/blackboard/html5mobileplayer.html?bvid=BV1Kd5GzeEHb&autoplay=0&hideCoverInfo=0&danmaku=0"
-              border="0"
-              allowfullscreen="true" width="800" height="450"></iframe>
-        </div>
+
       </div>
     </div>
     <div class="fixed bottom-4 right-4 z-50">
@@ -80,16 +94,34 @@ onMounted(async () => {
       </button>
     </div>
   </div>
-  <dialog id="my_modal_5" class="modal">
+  <dialog id="origin_v_dialog" class="modal">
     <div class="modal-box w-11/12 max-w-5xl">
       <h3 class="text-lg font-bold">请选择下载方式</h3>
       <form method="dialog">
         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
       </form>
-      <p class="py-4" v-html="downloadData.text"></p>
+      <p class="py-4" v-html="origin_download_data.text"></p>
       <div class="modal-action">
         <form method="dialog">
-          <a v-for="item in downloadData.download" :key="item.id" :href="item.url"
+          <a v-for="item in origin_download_data.download" :key="item.id" :href="item.url"
+             class="btn btn-soft btn-secondary mr-2"
+             target="_blank">
+            {{ item.title }}
+          </a>
+        </form>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="enhanced_v_dialog" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl">
+      <h3 class="text-lg font-bold">请选择下载方式</h3>
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      </form>
+      <p class="py-4" v-html="enhanced_download_data.text"></p>
+      <div class="modal-action">
+        <form method="dialog">
+          <a v-for="item in enhanced_download_data.download" :key="item.id" :href="item.url"
              class="btn btn-soft btn-secondary mr-2"
              target="_blank">
             {{ item.title }}
