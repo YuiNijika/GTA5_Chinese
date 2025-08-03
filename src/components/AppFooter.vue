@@ -4,7 +4,7 @@
         <p>
             © GTA5中配制作组
             <br />
-            2024 - {{ new Date().getFullYear() }} All right reserved
+            {{ new Date().getFullYear() }} All right reserved
         </p>
     </aside>
     <nav>
