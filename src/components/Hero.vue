@@ -5,7 +5,6 @@ const currentAudio = ref(null)
 const isPlaying = ref(false)
 const downloadData = ref([])
 const origin_download_data = ref([])
-const enhanced_download_data = ref([])
 
 const playAudio = () => {
   if (!currentAudio.value) {
@@ -41,8 +40,6 @@ onMounted(async () => {
     const data = await response.json()
     downloadData.value = data.data
     console.log('下载数据:', downloadData)
-    origin_download_data.value = data.data.origin
-    enhanced_download_data.value = data.data.enhanced
   } catch (error) {
     console.error('没有请求到数据:', error)
   }
@@ -62,8 +59,7 @@ onMounted(async () => {
               老一辈GTA艺术家倾情打造，好麦坞专业文案/配音团队匠心巨制，感受国语配音带来的沉浸式游戏体验吧！
             </p>
             <div class="flex gap-4">
-              <button class="btn btn-primary" onclick="origin_v_dialog.showModal()">传承版安装</button>
-              <button class="btn btn-primary" onclick="enhanced_v_dialog.showModal()">增强版安装</button>
+              <button class="btn btn-primary btn-lg" onclick="v_dialog.showModal()">立即下载</button>
             </div>
           </div>
           <div class="w-full lg:w-1/2 flex justify-center p-4">
@@ -94,34 +90,16 @@ onMounted(async () => {
       </button>
     </div>
   </div>
-  <dialog id="origin_v_dialog" class="modal">
+  <dialog id="v_dialog" class="modal">
     <div class="modal-box w-11/12 max-w-5xl">
       <h3 class="text-lg font-bold">请选择下载方式</h3>
       <form method="dialog">
         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
       </form>
-      <p class="py-4" v-html="origin_download_data.text"></p>
+      <p class="py-4" v-html="downloadData.text"></p>
       <div class="modal-action">
         <form method="dialog">
-          <a v-for="item in origin_download_data.download" :key="item.id" :href="item.url"
-             class="btn btn-soft btn-secondary mr-2"
-             target="_blank">
-            {{ item.title }}
-          </a>
-        </form>
-      </div>
-    </div>
-  </dialog>
-  <dialog id="enhanced_v_dialog" class="modal">
-    <div class="modal-box w-11/12 max-w-5xl">
-      <h3 class="text-lg font-bold">请选择下载方式</h3>
-      <form method="dialog">
-        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-      </form>
-      <p class="py-4" v-html="enhanced_download_data.text"></p>
-      <div class="modal-action">
-        <form method="dialog">
-          <a v-for="item in enhanced_download_data.download" :key="item.id" :href="item.url"
+          <a v-for="item in downloadData.download" :key="item.id" :href="item.url"
              class="btn btn-soft btn-secondary mr-2"
              target="_blank">
             {{ item.title }}
