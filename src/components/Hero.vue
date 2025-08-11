@@ -57,7 +57,7 @@ onMounted(async () => {
       <div class="max-w-10xl flex justify-center items-center gap-10">
         <div class="max-w-10xl flex flex-col lg:flex-row justify-center items-center gap-10">
           <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-4">
-            <h1 class="mb-10 text-3xl md:text-5xl font-bold">GTAV 国语配音</h1>
+            <h1 class="mb-5 text-3xl md:text-5xl font-bold">GTAV 国语配音</h1>
             <p class="mb-5 text-center">
               老一辈GTA艺术家倾情打造，好麦坞专业文案/配音团队匠心巨制，感受国语配音带来的沉浸式游戏体验吧！
             </p>
