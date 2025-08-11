@@ -14,7 +14,18 @@
         {
             "id": "3",
             "title": "GitHub",
-            "url": "https://github.com/YuiNijika/GTA5_Chinese"
+            "children": [
+                {
+                    "id": "1",
+                    "title": "网站",
+                    "url": "https://github.com/YuiNijika/GTA5_Chinese"
+                },
+                {
+                    "id": "2",
+                    "title": "启动器",
+                    "url": "https://github.com/Katock-Cricket/GTAV-CNDub-Setup"
+                }
+            ]
         }
     ]
 }
