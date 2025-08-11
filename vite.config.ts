@@ -88,6 +88,7 @@ export default defineConfig({
 
   // 构建配置
   build: {
+    outDir: 'docs',
     chunkSizeWarningLimit: 2000,          // 增大chunk大小警告限制
     rollupOptions: {
       output: {
