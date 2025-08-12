@@ -27,7 +27,17 @@ onMounted(async () => {
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     <li v-for="item in navItems" :key="item.id">
-                        <a :href="item.url" target="_blank">{{ item.title }}</a>
+                        <template v-if="item.children && item.children.length">
+                            <a>{{ item.title }}</a>
+                            <ul class="p-2">
+                                <li v-for="child in item.children" :key="child.id">
+                                    <a :href="child.url" target="_blank">{{ child.title }}</a>
+                                </li>
+                            </ul>
+                        </template>
+                        <template v-else>
+                            <a :href="item.url" target="_blank">{{ item.title }}</a>
+                        </template>
                     </li>
                 </ul>
             </div>
@@ -36,7 +46,19 @@ onMounted(async () => {
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="item in navItems" :key="item.id">
-                    <a :href="item.url" target="_blank">{{ item.title }}</a>
+                    <template v-if="item.children && item.children.length">
+                        <details class="dropdown">
+                            <summary>{{ item.title }}</summary>
+                            <ul class="p-2 bg-base-100 rounded-box shadow submenu">
+                                <li v-for="child in item.children" :key="child.id">
+                                    <a :href="child.url" target="_blank">{{ child.title }}</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </template>
+                    <template v-else>
+                        <a :href="item.url" target="_blank">{{ item.title }}</a>
+                    </template>
                 </li>
             </ul>
         </div>
@@ -45,3 +67,14 @@ onMounted(async () => {
         </div>
     </div>
 </template>
+
+<style scoped>
+/* 修复子菜单定位问题 */
+.submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 150px;
+    z-index: 10;
+}
+</style>
